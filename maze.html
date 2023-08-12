@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" href="../img/favicon.ico" sizes="any">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>最短経路</title>
+        <link rel="stylesheet" href="maze.css">
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=MML_SVG"></script>
+    </head>
+    <body>
+        <main>
+            <h1>
+                ABC007 C-
+                <a href="https://atcoder.jp/contests/abc007/tasks/abc007_3" target="_blank">
+                    <span class="problemname">幅優先探索</span>
+                </a>
+                を可視化してみよう
+            </h1>
+            <div class="information">
+                <div class="start">
+                    <h2>はじめに</h2>
+                    <p>
+                        これは <a href="https://atcoder.jp/contests/abc007/tasks/abc007_3" target="_blank">AtCoder Begginer Contest 007</a> の C 問題にて出題された <a href="https://atcoder.jp/contests/abc007/tasks/abc007_3" target="_blank">幅優先探索</a> の問題を可視化したツールです。
+                    </p>
+                </div>
+                <div class="rule">
+                    <h2>使い方</h2>
+                    <ul>
+                        <li><math><mi>W</mi></math> には横の長さを、<math><mi>H</mi></math> には縦の長さを入力します。</li>
+                        <li><math><mi>sy</mi></math> にはスタート地点の <math><mi>y</mi></math> 座標を、<math><mi>sx</mi></math> にはスタート地点の <math><mi>x</mi></math> 座標を入力します。</li>
+                        <li><math><mi>gy</mi></math> にはゴール地点の <math><mi>y</mi></math> 座標を、<math><mi>gx</mi></math> にはゴール地点の <math><mi>x</mi></math> 座標を入力します。</li>
+                        <li><math><mi>obstacle</mi></math> には迷路の壁の数を入力します。</li>
+                    </ul>
+                </div>
+                <div class="constraints">
+                    <h2>制約</h2>
+                    <ul>
+                        <li>
+                            <math>
+                                <mn>2</mn>
+                                <mo>&le;</mo>
+                                <mn>W, H</mn>
+                                <mo>&le;</mo>
+                                <mn>100</mn>
+                            </math>
+                        </li>
+                        <li>
+                            <math>
+                                <mn>1</mn>
+                                <mo>&le;</mo>
+                                <mn>sy, sx, gy, gx</mn>
+                                <mo>&le;</mo>
+                                <mn>100</mn>
+                            </math>
+                        </li>
+                        <li>
+                            <math>
+                                <mfenced>
+                                    <mn>sy, sx</mn>
+                                </mfenced>
+                                <mo>&ne;</mo>
+                                <mfenced>
+                                    <mn>gy, gx</mn>
+                                </mfenced>
+                            </math>
+                        </li>
+                        <li>
+                            <math >
+                                <mn>obstacle</mn>
+                                <mo>&le;</mo>
+                                <mfrac>
+                                    <mrow>
+                                        <mn>H</mn>
+                                        <mo>×</mo>
+                                        <mn>W</mn>
+                                    </mrow>
+                                    <mn>2</mn>
+                                </mfrac>
+                            </math>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="setting">
+                W
+                <input type="number" id="width" value="10" min="2" max="100">
+                H
+                <input type="number" id="height" value="10" min="2" max="100">
+                sy
+                <input type="number" id="sy" value="1" min="1" max="100">
+                sx
+                <input type="number" id="sx" value="1" min="1" max="100">
+                gy
+                <input type="number" id="gy" value="10" min="1" max="100">
+                gx
+                <input type="number" id="gx" value="10" min="1" max="100">
+                obstacle
+                <input type="number" id="obstacle" value="20" min="0" max="5000">
+            </div>
+            <div id="btn">
+                <p class="btn-start">START</p>
+            </div>
+            <h3 id="result"></h3>
+            <table id="board"></table>
+        </main>
+        <script src="./maze.js"></script>
+    </body>
+</html>

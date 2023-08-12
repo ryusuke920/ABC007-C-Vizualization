@@ -1,0 +1,71 @@
+main {
+    margin-top: 20px;
+}
+
+h1, h3, p {
+    text-align: center;
+}
+
+h3 {
+    color: red;
+}
+
+a {
+    text-decoration: none;
+}
+
+.problemname {
+    color: #008000;
+}
+
+.information li, h2, p {
+    margin: 0 auto;
+    padding: 5px 10px;
+}
+
+.start, .rule, .constraints {
+    border: 2mm ridge rgba(55, 255, 19, 0.2);
+    margin: 8px auto;
+    width: 60%;
+}
+
+input {
+    margin: 0 6px;
+}
+
+#setting {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+#btn {
+    width: 100px;
+    height: 50px;
+    margin: 0 auto;
+    padding: auto;
+    border: 2mm ridge rgba(19, 216, 255, 0.2);
+}
+
+p.btn-start {
+    line-height: 45px;
+}
+
+#btn:hover {
+    background-color: rgb(247, 245, 202);
+}
+
+#board {
+    margin: 0 auto;
+    margin-top: 40px;
+    border-collapse: collapse;
+    background: rgba(173, 216, 230, 0);
+}
+
+td {
+    border: 1px black solid;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
